@@ -48,7 +48,8 @@ def file_to_nbnode(notebook_filename):
     """
     # with open(notebook_filename, 'r', encoding='utf-8') as f:
     #   nb_node = nbformat.read(f, as_version=4)
-    nb_node = nbformat.read(notebook_filename, as_version=4)
+    with open(notebook_filename, 'r', encoding='utf-8') as f:
+        nb_node = nbformat.read(f, as_version=4)
     return nb_node
 
 
