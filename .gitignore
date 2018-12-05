@@ -271,4 +271,11 @@ tex/
 .synctex.gz
 .toc
 
+# Computer Generated Files
+.tex
+.pdf
+
+## Gooey Examples
+
+GooeyExamples/
 

@@ -1,0 +1,18 @@
+% Built off of the article.tplx tempate
+
+((* extends 'article.tplx' *))
+
+
+%===============================================================================
+% ENGR114 Lab Instructions Template
+%===============================================================================
+
+((* block docclass *))
+\documentclass[11pt]{article}
+\textwidth=7in
+\textheight=9.0in
+\topmargin=-0.5in
+\headheight=15pt
+\headsep=.5in
+\hoffset = -.85in
+((* endblock docclass *))
