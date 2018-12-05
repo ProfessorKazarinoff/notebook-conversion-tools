@@ -8,7 +8,11 @@ Created on Wed Dec  5 10:26:57 2018
 @author: peter.kazarinoff
 """
 
+from pathlib import Path
+
 from gooey import Gooey, GooeyParser
+
+from converters import file_to_nbnode, export_nbnode
 
 
 @Gooey(dump_build_config=True, program_name="Notebook Conversion Tool")
@@ -22,9 +26,21 @@ def main():
     my_parser.add_argument("Template_File", help=file_help_msg, widget="FileChooser")
 
     args = my_parser.parse_args()
-    print(f'input file{args.Notebook_to_Convert}')
-    print(f'output directory {args.Output_Directory}')
-    print(f'template file {args.Template_File}')
+    nbnode = file_to_nbnode(args.Notebook_to_Convert)
+    # construct output .tex file file path
+    outfile_Path = Path(args.Output_Directory, Path(args.Notebook_to_Convert).stem)
+
+    # construct template file path
+    template_file_Path = Path(args.Template_File)
+
+    # export notebook node object to .tex file
+    export_nbnode(nbnode, outfile_Path, pdf=False, template_file=template_file_Path)
+
+    print(f'input file \n {args.Notebook_to_Convert}')
+    print()
+    print(f'output directory \n {args.Output_Directory}')
+    print()
+    print(f'template file \n {args.Template_File}')
 
 
 if __name__ == "__main__":
