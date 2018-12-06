@@ -8,11 +8,21 @@
 %===============================================================================
 
 ((* block docclass *))
-\documentclass[11pt]{article}
-\textwidth=7in
-\textheight=9.0in
-\topmargin=-0.5in
-\headheight=15pt
-\headsep=.5in
-\hoffset = -.85in
+    \documentclass[11pt]{article}
 ((* endblock docclass *))
+
+((* block packages *))
+    ((* include 'installed_packages.tplx' *))
+((* endblock packages *))
+
+((* block definitions *))
+    ((* include 'header_and_footer.tplx' *))
+    ((( super() )))
+((* endblock definitions *))
+
+((* block margins *))
+    ((* include 'margins.tplx' *))
+((* endblock margins *))
+
+((* block maketitle *))
+((* endblock maketitle *))

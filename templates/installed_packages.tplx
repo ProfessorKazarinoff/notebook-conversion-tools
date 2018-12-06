@@ -1,0 +1,27 @@
+%% installed package.tplx %%
+
+\usepackage{lipsum}%% a garbage package you don't need except to create examples.
+\usepackage{fancyhdr}
+%\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+\usepackage{amsmath}
+\usepackage{lastpage}
+\usepackage{textcomp}  % copyright symbol
+\usepackage{framed,color}
+\definecolor{shadecolor}{rgb}{.8,.8,.8}
+\usepackage{graphicx}
+\graphicspath{ {./} }
+
+% for MATLAB syntax highlighting
+\usepackage{listings}             % Include the listings-package
+\usepackage{color}
+\definecolor{mygray}{rgb}{0.8,0.8,0.8} % color values Red, Green, Blue
+\definecolor{mygreen}{RGB}{28,172,0}
+\definecolor{mylilas}{RGB}{170,55,241}
+\pagestyle{fancy}
