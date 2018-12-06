@@ -1,0 +1,27 @@
+\newcommand{\labtitle}{Lab04 Plotting} 
+
+%% header_and_footer_generated.tplx %%
+
+% Header and Footer
+
+ewcommand{\labauthor}{Adapted from: D. Kruger, 2016 by P. Kazarinoff}
+\lhead{ENGR114 Engineering Programming}
+head{Portland Community College}
+\lfoot{ootnotesize{\labauthor, 	he\year}}
+\cfoot{}
+foot{ootnotesize	hepage~of~\pageref{LastPage}}}  % must compile twice for LastPage
+
+%lines below header and above footer
+enewcommand{\headrulewidth}{0.4pt}
+enewcommand{ootrulewidth}{0.4pt}
+
+% Tabs
+
+ewcommand{\itab}[1]{\hspace{0em}lap{#1}}
+
+ewcommand{	ab}[1]{\hspace{.4	extwidth}lap{#1}}
+
+ewcommand{	abA}[1]{\hspace{.2	extwidth}lap{#1}}
+    
+    
+    

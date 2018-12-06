@@ -53,6 +53,59 @@ def file_to_nbnode(notebook_filename):
     return nb_node
 
 
+def extract_lab_title(notebook_filename):
+    """
+    Function extracts the name of a lab from a full file path
+    ENGR114 is removed from the filename
+    All dashes and underscores are converted to spaces
+
+    :param notebook_filename: a full path to a notebook
+    :return: str: a string which is the name of the lab, with spaces between the words
+    """
+    fname = Path(notebook_filename).stem
+    labname = fname.strip('ENGR114')
+    labname_underscore_to_spaces = labname.replace("_", " ")
+    labname_dashes_to_spaces = labname_underscore_to_spaces.replace("-", " ")
+    labname_no_leading_spaces = labname_dashes_to_spaces.rstrip().lstrip()
+    return labname_no_leading_spaces
+
+
+def create_header_template(labname_str, templatename='header_and_footer_generated.tplx'):
+    """
+    Function creater_header_template takes in a lab name with spaces and creates a template file with the lab name in the file
+    :param labname:
+    :return: None, the function creates a file when it runs
+    """
+    s1 = '\\newcommand{{{}}}{{{}}} \n'.format('\\labtitle', labname_str)
+
+    # need to do more \\ escaping and {{ to make { work
+    s2 = """
+%% header_and_footer_generated.tplx %%
+
+% Header and Footer
+\newcommand{\labauthor}{Adapted from: D. Kruger, 2016 by P. Kazarinoff}
+\lhead{ENGR114 Engineering Programming}
+\rhead{Portland Community College}
+\lfoot{\footnotesize{\labauthor, \the\year}}
+\cfoot{}
+\rfoot{\footnotesize\thepage~of~\pageref{LastPage}}}  % must compile twice for LastPage
+
+%lines below header and above footer
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Tabs
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcommand{\tab}[1]{\hspace{.4\textwidth}\rlap{#1}}
+\newcommand{\tabA}[1]{\hspace{.2\textwidth}\rlap{#1}}
+    
+    
+    """
+
+    with open(templatename, 'w') as f:
+        f.writelines(s1)
+        f.writelines(s2)
+
 def export_nbnode(
         combined_nb: NotebookNode, output_file: Path, pdf=False, template_file=None
 ):

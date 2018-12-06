@@ -1,0 +1,29 @@
+% Built off of the article.tplx tempate
+
+((* extends 'article.tplx' *))
+
+
+%===============================================================================
+% ENGR114 Lab Instructions Template
+%===============================================================================
+
+((* block docclass *))
+    \documentclass[11pt]{article}
+((* endblock docclass *))
+
+((* block packages *))
+    ((* include 'installed_packages_rev2.tplx' *))
+    ((( super() )))
+((* endblock packages *))
+
+((* block definitions *))
+    ((* include 'header_and_footer.tplx' *))
+    ((( super() )))
+((* endblock definitions *))
+
+((* block margins *))
+    ((* include 'margins.tplx' *))
+((* endblock margins *))
+
+((* block maketitle *))
+((* endblock maketitle *))
