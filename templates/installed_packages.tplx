@@ -6,7 +6,7 @@
 \definecolor{shadecolor}{rgb}{.8,.8,.8}
 \usepackage{titlesec}
 % no indent on any paragraphs, vertical spacing between paragraphs is set to 1em
-\usepackage[skip=1em]{parskip}
+\usepackage[]{parskip}  % add [skip=1em] if the compiler will allow.
 
 % for MATLAB syntax highlighting
 \usepackage{listings}             % Include the listings-package

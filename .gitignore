@@ -270,6 +270,7 @@ tex/
 .out
 .synctex.gz
 .toc
+.pdf
 
 # Computer Generated Files
 .tex
