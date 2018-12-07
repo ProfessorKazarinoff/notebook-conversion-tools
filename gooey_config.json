@@ -1,7 +1,7 @@
 {
   "language": "english",
   "target": "\"C:\\Users\\student\\AppData\\Local\\Continuum\\miniconda3\\envs\\convenv\\python.exe\" -u \"convert_GUI.py\"",
-  "program_name": "Notebook Conversion Tool",
+  "program_name": "Jupter Notebook Conversion Tool",
   "program_description": "A Python GUI App to convert Jupyter Notebooks to other formats",
   "sidebar_title": "Actions",
   "default_size": [
@@ -61,7 +61,7 @@
               "required": true,
               "data": {
                 "display_name": "Notebook_to_Convert",
-                "help": "Name of the Jupyter notebook file (.ipynb-file) you want to process",
+                "help": "Select a Jupyter notebook file (.ipynb-file) to process",
                 "required": true,
                 "nargs": "",
                 "commands": [],
@@ -113,7 +113,7 @@
               "required": true,
               "data": {
                 "display_name": "Template_File",
-                "help": "Name of the Jupyter notebook file (.ipynb-file) you want to process",
+                "help": "Select a template (.tplx-file) to apply",
                 "required": true,
                 "nargs": "",
                 "commands": [],

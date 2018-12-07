@@ -15,15 +15,16 @@ from gooey import Gooey, GooeyParser
 from converters import file_to_nbnode, export_nbnode, extract_lab_title, create_lab_title_template
 
 
-@Gooey(dump_build_config=True, program_name="Notebook Conversion Tool")
+@Gooey(dump_build_config=True, program_name="Jupter Notebook Conversion Tool")
 def main():
     desc = "A Python GUI App to convert Jupyter Notebooks to other formats"
-    file_help_msg = "Name of the Jupyter notebook file (.ipynb-file) you want to process"
+    notebook_select_help_msg = "Select a Jupyter notebook file (.ipynb-file) to process"
+    template_select_help_msg = "Select a template (.tplx-file) to apply"
 
     my_parser = GooeyParser(description=desc)
-    my_parser.add_argument("Notebook_to_Convert", help=file_help_msg, widget="FileChooser")
+    my_parser.add_argument("Notebook_to_Convert", help=notebook_select_help_msg, widget="FileChooser")
     my_parser.add_argument("Output_Directory", help="Directory to save output", widget="DirChooser")
-    my_parser.add_argument("Template_File", help=file_help_msg, widget="FileChooser")
+    my_parser.add_argument("Template_File", help=template_select_help_msg, widget="FileChooser")
 
     args = my_parser.parse_args()
     nbnode = file_to_nbnode(args.Notebook_to_Convert)
