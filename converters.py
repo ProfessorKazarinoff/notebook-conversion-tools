@@ -48,7 +48,7 @@ def file_to_nbnode(notebook_filename):
     """
     # with open(notebook_filename, 'r', encoding='utf-8') as f:
     #   nb_node = nbformat.read(f, as_version=4)
-    with open(notebook_filename, 'r', encoding='utf-8') as f:
+    with open(notebook_filename, "r", encoding="utf-8") as f:
         nb_node = nbformat.read(f, as_version=4)
     return nb_node
 
@@ -63,28 +63,29 @@ def extract_lab_title(notebook_path):
     :return: str: a string which is the name of the lab, with spaces between the words
     """
     fname = Path(notebook_path).stem
-    labname = fname.strip('ENGR114')
+    labname = fname.strip("ENGR114")
     labname_underscore_to_spaces = labname.replace("_", " ")
     labname_dashes_to_spaces = labname_underscore_to_spaces.replace("-", " ")
     labname_no_leading_spaces = labname_dashes_to_spaces.rstrip().lstrip()
     return labname_no_leading_spaces
 
 
-def create_lab_title_template(labname_str, template_name='lab_title.tplx'):
+def create_lab_title_template(labname_str, template_name="lab_title.tplx"):
     """
     Function creater_header_template takes in a lab name with spaces and creates a template file with the lab name in the file
     :param labname:
     :return: None, the function creates a file when it runs
     """
-    template_path = os.path.join(os.getcwd(),'templates', template_name)
-    header = '%% lab_title.tplx %% \n \n'
-    s = '\\newcommand{{{}}}{{{}}} \n'.format('\\labtitle', labname_str)
-    with open(template_path, 'w') as f:
+    template_path = os.path.join(os.getcwd(), "templates", template_name)
+    header = "%% lab_title.tplx %% \n \n"
+    s = "\\newcommand{{{}}}{{{}}} \n".format("\\labtitle", labname_str)
+    with open(template_path, "w") as f:
         f.writelines(header)
         f.writelines(s)
 
+
 def export_nbnode(
-        combined_nb: NotebookNode, output_file: Path, pdf=False, template_file=None
+    combined_nb: NotebookNode, output_file: Path, pdf=False, template_file=None
 ):
     resources = {}
     resources["unique_key"] = "combined"
@@ -100,10 +101,10 @@ def export_nbnode(
 
 
 def convert_notebook(
-        notebookfile="sample.ipynb",
-        outputfile="texout",
-        templatefile="article.tplx",
-        debug_flag=False,
+    notebookfile="sample.ipynb",
+    outputfile="texout",
+    templatefile="article.tplx",
+    debug_flag=False,
 ):
     # convert notebook file to notebook node object
     nbnode = file_to_nbnode(notebookfile)
