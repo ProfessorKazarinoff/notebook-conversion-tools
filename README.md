@@ -33,7 +33,7 @@ Now that the virtual environment and packages are all installed, activate the vi
 
 ### Activate virtual environment and Start the GUI
 
-The virtual environment created in the last step is called ```convenv```. Activate it with the ```activate``` command. Before running the GUI, install the [**Gooey**](https://github.com/chriskiehl/Gooey) module from PyPI. Then run the ```convert_GUI.py``` script.
+The virtual environment created in the last step is called ```convenv```. Activate it with the ```activate``` command. Before running the GUI, install the [**Gooey**](https://github.com/chriskiehl/Gooey) module from PyPI with **pip**. The **Gooey** module is not available in the default conda channel or in **conda-forge**. Then run the ```convert_GUI.py``` script.
 
 ```text
 $ conda activate convenv
