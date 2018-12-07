@@ -1,4 +1,6 @@
-% Built off of the article.tplx tempate
+%% ENGR114_lab_assignment_rev2.tplx %%
+%
+% Built off of the article.tplx tempate %
 
 ((* extends 'article.tplx' *))
 
@@ -13,10 +15,13 @@
 
 ((* block packages *))
     ((* include 'installed_packages.tplx' *))
+    ((( super() )))
 ((* endblock packages *))
 
 ((* block definitions *))
+    ((* include 'lab_title.tplx' *))
     ((* include 'header_and_footer.tplx' *))
+    ((* include 'title_sec_formatting.tplx' *))
     ((( super() )))
 ((* endblock definitions *))
 

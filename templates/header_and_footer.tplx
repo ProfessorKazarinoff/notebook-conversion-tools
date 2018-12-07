@@ -3,7 +3,7 @@
 % Header and Footer
 \lhead{\textbf{\labtitle}}
 \rhead{ENGR114 Engineering Programming}
-\lfoot{\labauthor, \the\year}
+\lfoot{Portland Community College, \the\year}
 \cfoot{}
 \rfoot{\thepage~of~\pageref{LastPage}}  % must compile twice for LastPage
 

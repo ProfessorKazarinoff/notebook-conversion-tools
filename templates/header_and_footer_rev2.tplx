@@ -3,8 +3,8 @@
 % Header and Footer
 \newcommand{\labauthor}{Adapted from: D. Kruger, 2016 by P. Kazarinoff}
 \lhead{ENGR114 Engineering Programming}
-\rhead{Portland Community College}
-\lfoot{\footnotesize{\labauthor, \the\year}}
+\rhead{\labtitle}
+\lfoot{\footnotesize{Portland Community College, \the\year}}
 \cfoot{}
 \rfoot{\footnotesize\thepage~of~\pageref{LastPage}}}  % must compile twice for LastPage
 

@@ -1,6 +1,6 @@
 {
   "language": "english",
-  "target": "\"C:\\Users\\peter.kazarinoff\\AppData\\Local\\Continuum\\Anaconda3\\envs\\conv\\python.exe\" -u \"C:/Users/peter.kazarinoff/Documents/conversion-tools/convert_GUI.py\"",
+  "target": "\"C:\\Users\\student\\AppData\\Local\\Continuum\\miniconda3\\envs\\convenv\\python.exe\" -u \"convert_GUI.py\"",
   "program_name": "Notebook Conversion Tool",
   "program_description": "A Python GUI App to convert Jupyter Notebooks to other formats",
   "sidebar_title": "Actions",
@@ -23,7 +23,7 @@
   "manual_start": false,
   "monospace_display": false,
   "image_dir": "::gooey/default",
-  "language_dir": "C:\\Users\\peter.kazarinoff\\AppData\\Local\\Continuum\\Anaconda3\\envs\\conv\\lib\\site-packages\\gooey\\languages",
+  "language_dir": "C:\\Users\\student\\AppData\\Local\\Continuum\\miniconda3\\envs\\convenv\\lib\\site-packages\\gooey\\languages",
   "progress_regex": null,
   "progress_expr": null,
   "disable_progress_bar_animation": false,

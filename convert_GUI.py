@@ -12,7 +12,7 @@ from pathlib import Path
 
 from gooey import Gooey, GooeyParser
 
-from converters import file_to_nbnode, export_nbnode
+from converters import file_to_nbnode, export_nbnode, extract_lab_title, create_lab_title_template
 
 
 @Gooey(dump_build_config=True, program_name="Notebook Conversion Tool")
@@ -33,8 +33,14 @@ def main():
     # construct template file path
     template_file_Path = Path(args.Template_File)
 
+    # create lab_title.tplx file where the lab title from the input notebook file name is derived
+    lab_title_str = extract_lab_title(args.Notebook_to_Convert)
+    create_lab_title_template(lab_title_str,'lab_title.tplx')
+
     # export notebook node object to .tex file
     export_nbnode(nbnode, outfile_Path, pdf=False, template_file=template_file_Path)
+
+
 
     print(f'input file \n {args.Notebook_to_Convert}')
     print()
