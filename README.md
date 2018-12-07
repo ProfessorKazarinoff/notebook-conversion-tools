@@ -1,6 +1,6 @@
 # notebook-conversion-tools
 
-A repo of a Jupyter notebook conversion tool. This tools convert Jupyter Notebooks into LaTeX .tex-files
+A repo of a Jupyter notebook conversion tool. This tools convert Jupyter Notebooks into LaTeX .tex-files. Uses Python and the awesome [**Gooey**](https://github.com/chriskiehl/Gooey) package.
 
 ![Convert GUI](convert_GUI.PNG)
 
