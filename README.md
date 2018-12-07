@@ -2,6 +2,8 @@
 
 A repo of Jupyter notebook conversion tools. These tools convert Jupyter Notebooks into LaTeX .tex and pdf
 
+![Convert GUI](convert_GUI.PNG)
+
 ## To use the GUI locally
 
 To run the Jupyter Notebook conversion GUI locally, start out by downloading and installing [Anaconda](https://docs.anaconda.com/anaconda/) or [Miniconda](https://conda.io/miniconda.html).
