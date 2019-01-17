@@ -1,8 +1,8 @@
 {
   "language": "english",
-  "target": "'/home/tribilium/anaconda3/envs/convenv/bin/python' -u 'convert_GUI.py'",
-  "program_name": "Jupter Notebook Conversion Tool",
-  "program_description": "A Python GUI App to convert Jupyter Notebooks to other formats",
+  "target": "\"C:\\Users\\peter.kazarinoff\\AppData\\Local\\Continuum\\Anaconda3\\envs\\conv\\python.exe\" -u \"C:/Users/peter.kazarinoff/Documents/conversion-tools/unzip_D2L.py\"",
+  "program_name": "Unzip and rename files from D2L",
+  "program_description": "A Python GUI App to convert a .zip archive downloaded from D2L to one folder. Also renames the files with student's last name",
   "sidebar_title": "Actions",
   "default_size": [
     610,
@@ -23,7 +23,7 @@
   "manual_start": false,
   "monospace_display": false,
   "image_dir": "::gooey/default",
-  "language_dir": "/home/tribilium/anaconda3/envs/convenv/lib/python3.7/site-packages/gooey/languages",
+  "language_dir": "C:\\Users\\peter.kazarinoff\\AppData\\Local\\Continuum\\Anaconda3\\envs\\conv\\lib\\site-packages\\gooey\\languages",
   "progress_regex": null,
   "progress_expr": null,
   "disable_progress_bar_animation": false,
@@ -48,26 +48,52 @@
   "error_color": "#ea7878",
   "layout": "standard",
   "widgets": {
-    "convert_GUI.py": {
+    "unzip_D2L.py": {
       "command": "::gooey/default",
       "contents": [
         {
           "name": "Required Arguments",
           "items": [
             {
-              "id": "Notebook_to_Convert",
+              "id": "zip_to_convert",
               "type": "FileChooser",
               "cli_type": "positional",
               "required": true,
               "data": {
-                "display_name": "Notebook_to_Convert",
-                "help": "Select a Jupyter notebook file (.ipynb-file) to process",
+                "display_name": "zip_to_convert",
+                "help": "Select a .zip archive to process",
                 "required": true,
                 "nargs": "",
                 "commands": [],
                 "choices": [],
                 "default": null,
-                "dest": "Notebook_to_Convert"
+                "dest": "zip_to_convert"
+              },
+              "options": {
+                "error_color": "#ea7878",
+                "validator": {
+                  "test": "user_input and not user_input.isspace()",
+                  "message": "This field is required"
+                },
+                "external_validator": {
+                  "cmd": ""
+                }
+              }
+            },
+            {
+              "id": "file_extension_to_rename",
+              "type": "FileChooser",
+              "cli_type": "positional",
+              "required": true,
+              "data": {
+                "display_name": "file_extension_to_rename",
+                "help": "input the file extension you want to convert the names of. Do not include . just extension",
+                "required": true,
+                "nargs": "",
+                "commands": [],
+                "choices": [],
+                "default": null,
+                "dest": "file_extension_to_rename"
               },
               "options": {
                 "error_color": "#ea7878",
@@ -94,32 +120,6 @@
                 "choices": [],
                 "default": null,
                 "dest": "Output_Directory"
-              },
-              "options": {
-                "error_color": "#ea7878",
-                "validator": {
-                  "test": "user_input and not user_input.isspace()",
-                  "message": "This field is required"
-                },
-                "external_validator": {
-                  "cmd": ""
-                }
-              }
-            },
-            {
-              "id": "Template_File",
-              "type": "FileChooser",
-              "cli_type": "positional",
-              "required": true,
-              "data": {
-                "display_name": "Template_File",
-                "help": "Select a template (.tplx-file) to apply",
-                "required": true,
-                "nargs": "",
-                "commands": [],
-                "choices": [],
-                "default": null,
-                "dest": "Template_File"
               },
               "options": {
                 "error_color": "#ea7878",

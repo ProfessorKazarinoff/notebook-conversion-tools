@@ -1,6 +1,6 @@
-%% ENGR114_lab_assignment_rev2.tplx %%
+%% ENGR114_lab_assignment.tplx %%
 %
-% Built off of the article.tplx tempate %
+% Built off of the article.tplx template %
 
 ((* extends 'article.tplx' *))
 
@@ -22,6 +22,11 @@
     ((* include 'lab_title.tplx' *))
     ((* include 'header_and_footer.tplx' *))
     ((* include 'title_sec_formatting.tplx' *))
+    ((* block title *))
+        \title{Problem Solving 101 with Python}
+        \author{Peter D. Kazarinoff, PhD}
+        \date{}
+    ((* endblock title *))
     ((( super() )))
 ((* endblock definitions *))
 
