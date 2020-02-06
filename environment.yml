@@ -92,5 +92,3 @@ dependencies:
     - psutil==5.4.8
     - pypubsub==4.0.0
     - wxpython==4.0.3
-prefix: C:\Users\student\AppData\Local\Continuum\miniconda3\envs\env
-
