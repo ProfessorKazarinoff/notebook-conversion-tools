@@ -61,7 +61,7 @@ psutil==5.4.8
 ptyprocess==0.6.0
 pycosat==0.6.3
 pycparser==2.19
-Pygments==2.2.0
+Pygments==2.7.4
 pyOpenSSL==18.0.0
 pyparsing==2.3.0
 Pypubsub==4.0.0
