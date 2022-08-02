@@ -4,7 +4,7 @@
 \lhead{\textbf{\labtitle}}
 \rhead{ENGR114 Engineering Programming}
 \lfoot{Portland Community College, \the\year}
-\cfoot{}
+\cfoot{License: \href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{CC BY-NC-SA 4.0}}
 \rfoot{\thepage~of~\pageref{LastPage}}  % must compile twice for LastPage
 
 %lines below header and above footer
