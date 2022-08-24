@@ -1,0 +1,37 @@
+%% ENGR114_syllabus.tplx %%
+%
+% Built off of the article.tplx template %
+
+((* extends 'article.tplx' *))
+
+
+%===============================================================================
+% ENGR114 Syllabus Template
+%===============================================================================
+
+((* block docclass *))
+    \documentclass[11pt]{article}
+((* endblock docclass *))
+
+((* block packages *))
+    ((* include 'installed_packages.tplx' *))
+    ((( super() )))
+((* endblock packages *))
+
+((* block definitions *))
+    ((* include 'header_and_footer_for_syllabus.tplx' *))
+    ((* include 'title_sec_formatting.tplx' *))
+    ((* block title *))
+        \title{ENGR114 Syllabus}
+        \author{Peter D. Kazarinoff, PhD}
+        \date{}
+    ((* endblock title *))
+    ((( super() )))
+((* endblock definitions *))
+
+((* block margins *))
+    ((* include 'margins.tplx' *))
+((* endblock margins *))
+
+((* block maketitle *))
+((* endblock maketitle *))

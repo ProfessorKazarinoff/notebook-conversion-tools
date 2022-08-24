@@ -276,7 +276,9 @@ tex/
 .tex
 .pdf
 
-## Gooey Examples
+# Gooey Examples
 
 GooeyExamples/
 
+# VSCode
+.vscode/

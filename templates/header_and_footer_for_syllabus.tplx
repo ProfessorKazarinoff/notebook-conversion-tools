@@ -1,8 +1,11 @@
-%% header_and_footer.tplx %%
+%% header_and_footer_for_syllabus.tplx %%
 
-% Header and Footer
-\lhead{\textbf{\labtitle}}
-\rhead{ENGR114 Engineering Programming}
+% Header
+\lhead{ENGR114 Engineering Programming}
+\chead{Syllabus}
+\rhead{2022Q4}
+
+% Footer
 \lfoot{Portland Community College, \the\year}
 \cfoot{License: \href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{CC BY-NC-SA 4.0}}
 \rfoot{\thepage~of~\pageref{LastPage}}  % must compile twice for LastPage
