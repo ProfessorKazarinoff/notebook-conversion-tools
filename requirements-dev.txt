@@ -10,7 +10,7 @@ cfgv==1.1.0
 chardet==3.0.4
 conda==4.5.11
 conda-build==3.17.1
-cryptography==2.4.1
+cryptography==39.0.1
 cycler==0.10.0
 decorator==4.3.0
 entrypoints==0.2.3
