@@ -7,6 +7,9 @@
 \usepackage{titlesec}
 % no indent on any paragraphs, vertical spacing between paragraphs is set to 1em
 \usepackage[]{parskip}  % add [skip=1em] if the compiler will allow.
+\usepackage[utf8]{inputenc}  % allows unicode characters saved in .tex document (as the actual character and not an escape code or using a LaTeX command) to render correctly in .pdf
+\inputencoding{utf8}
+\DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}} % makes an Omega character in the text document render as an Omega character in the pdf
 
 % for MATLAB syntax highlighting
 \usepackage{listings}             % Include the listings-package

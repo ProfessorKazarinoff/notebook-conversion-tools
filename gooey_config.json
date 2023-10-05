@@ -1,6 +1,7 @@
 {
   "language": "english",
-  "target": "\"C:\\Users\\peter.kazarinoff\\AppData\\Local\\Continuum\\Anaconda3\\envs\\convenv\\python.exe\" -u \"convert_GUI.py\"",
+  "target": "\"C:\\Users\\peter.kazarinoff\\AppData\\Local\\Continuum\\Anaconda3\\envs\\conv\\python.exe\" -u \"convert_GUI.py\"",
+  "suppress_gooey_flag": false,
   "program_name": "Jupter Notebook Conversion Tool",
   "program_description": "A Python GUI App to convert Jupyter Notebooks to other formats",
   "sidebar_title": "Actions",
@@ -14,18 +15,24 @@
   "encoding": "utf-8",
   "show_stop_warning": true,
   "show_success_modal": true,
+  "show_failure_modal": true,
   "force_stop_is_error": true,
   "poll_external_updates": false,
   "return_to_config": false,
+  "show_restart_button": true,
+  "requires_shell": true,
+  "menu": [],
+  "clear_before_run": false,
   "use_legacy_titles": true,
   "num_required_cols": 2,
   "num_optional_cols": 2,
   "manual_start": false,
   "monospace_display": false,
   "image_dir": "::gooey/default",
-  "language_dir": "C:\\Users\\peter.kazarinoff\\AppData\\Local\\Continuum\\Anaconda3\\envs\\convenv\\lib\\site-packages\\gooey\\languages",
+  "language_dir": "C:\\Users\\peter.kazarinoff\\AppData\\Local\\Continuum\\Anaconda3\\envs\\conv\\lib\\site-packages\\gooey\\languages",
   "progress_regex": null,
   "progress_expr": null,
+  "hide_progress_msg": false,
   "disable_progress_bar_animation": false,
   "disable_stop_button": false,
   "navigation": "SIDEBAR",
@@ -45,14 +52,18 @@
   "terminal_font_family": null,
   "terminal_font_weight": null,
   "terminal_font_size": null,
+  "richtext_controls": false,
   "error_color": "#ea7878",
   "layout": "standard",
   "widgets": {
     "convert_GUI.py": {
       "command": "::gooey/default",
+      "name": "convert_GUI.py",
+      "help": null,
+      "description": "",
       "contents": [
         {
-          "name": "Required Arguments",
+          "name": "required_args_msg",
           "items": [
             {
               "id": "Notebook_to_Convert",
@@ -71,6 +82,9 @@
               },
               "options": {
                 "error_color": "#ea7878",
+                "label_color": "#000000",
+                "help_color": "#363636",
+                "full_width": false,
                 "validator": {
                   "test": "user_input and not user_input.isspace()",
                   "message": "This field is required"
@@ -97,6 +111,9 @@
               },
               "options": {
                 "error_color": "#ea7878",
+                "label_color": "#000000",
+                "help_color": "#363636",
+                "full_width": false,
                 "validator": {
                   "test": "user_input and not user_input.isspace()",
                   "message": "This field is required"
@@ -123,6 +140,9 @@
               },
               "options": {
                 "error_color": "#ea7878",
+                "label_color": "#000000",
+                "help_color": "#363636",
+                "full_width": false,
                 "validator": {
                   "test": "user_input and not user_input.isspace()",
                   "message": "This field is required"
@@ -136,6 +156,12 @@
           "groups": [],
           "description": null,
           "options": {
+            "label_color": "#000000",
+            "description_color": "#363636",
+            "legacy": {
+              "required_cols": 2,
+              "optional_cols": 2
+            },
             "columns": 2,
             "padding": 10,
             "show_border": false
